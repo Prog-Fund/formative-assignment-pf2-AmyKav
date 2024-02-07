@@ -5,15 +5,14 @@
  */
 public class Product {
 
-    private String productName = " ";    // max length = 20 characters, default value is "".
+    private String productName ="";    // max length = 20 characters, default value is "".
                                     // When constructor is called, if the name is >20 chars, you should
                                     // only store the first 20 characters (Hint: use substr())
+    private int productCode =5000;  // valid values 1000 - 5000 inclusive - default value is 5000
 
-    private int productCode = 5000;  // valid values 1000 - 5000 inclusive - default value is 5000
+    private double unitCost =1;  //valid values are any positive number - default to 1
 
-    private double unitCost = 1;  //valid values are any positive number - default to 1
-
-    private boolean inCurrentProductLine = true;   // no validation required. This is the default.
+    private boolean inCurrentProductLine;   // no validation required. This is the default.
     /**
      * Constructor for objects of class Product
      * @param productName Name of the product
@@ -92,7 +91,7 @@ public class Product {
      * @param unitCost The new unit cost for the product
      */
     public void setUnitCost(double unitCost) {
-        if((unitCost >= 1)&& (unitCost <= 99999)){
+        if((unitCost >= 1)){
             this.unitCost = unitCost;
         }
     }

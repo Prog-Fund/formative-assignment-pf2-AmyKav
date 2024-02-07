@@ -37,9 +37,7 @@ public class Driver{
 
     private void runMenu(){
         int option = mainMenu();
-
         while (option != 0){
-
             switch (option){
                 case 1 -> printProducts();
                 case 2 -> printCurrentProducts();
@@ -47,7 +45,6 @@ public class Driver{
                 case 4 -> printCheapestProduct();
                 default -> System.out.println("Invalid option entered: " + option);
             }
-
             //pause the program so that the user can read what we just printed to the terminal window
             System.out.println("\nPress enter key to continue...");
             input.nextLine();
